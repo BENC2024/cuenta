@@ -32,7 +32,7 @@ export class CuentaCorriente extends Cuenta {
                 this.saldo = this.saldo - cantidad;
             } 
             else {
-                this.sobregiro = this.sobregiro - (cantidad - this.saldo);
+                this.sobregiro -= (cantidad - this.saldo);
                 this.saldo = 0;
             }
             this.numeroRetiros++;
