@@ -6,7 +6,6 @@ export class CuentaAhorros extends Cuenta {
 
     constructor(saldo:number,numeroConsignaciones:number) {
         super(saldo,numeroConsignaciones)
-        //this.activa = saldo >= 10000;
         if (saldo >= 10000){
             this.activa = true
         }
@@ -30,7 +29,6 @@ export class CuentaAhorros extends Cuenta {
             console.log("La cuenta de ahorros está inactiva.");
         }
     }
-
     retirar(cantidad: number) {
         if (this.activa) {
             super.retirar(cantidad);
@@ -39,14 +37,12 @@ export class CuentaAhorros extends Cuenta {
             console.log("La cuenta de ahorros está inactiva.");
         }
     }
-
     extractoMensual() {
         if (this.numeroRetiros > 4) {
             this.comisionMensual = 1000 * (this.numeroRetiros - 4);
         }
         super.extractoMensual();
     }
-
     imprimir() {
         super.imprimir();
         console.log("Cuenta activa: ", this.activa);

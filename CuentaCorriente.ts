@@ -29,19 +29,18 @@ export class CuentaCorriente extends Cuenta {
     retirar(cantidad: number) {
         if (cantidad <= this.saldo + this.sobregiro) {
             if (cantidad <= this.saldo) {
-                this.saldo = this.saldo - cantidad;
+                this.saldo = this.saldo - cantidad
             } 
             else {
-                this.sobregiro -= (cantidad - this.saldo);
-                this.saldo = 0;
+                this.sobregiro = this.sobregiro - (cantidad - this.saldo)
+                this.saldo = 0
             }
-            this.numeroRetiros++;
+            this.numeroRetiros = this.numeroRetiros + 1
         } 
         else {
             console.log("No se puede retirar esa cantidad por sobregiro insuficiente.");
         }
     }
-
     imprimir() {
         super.imprimir();
         console.log("Sobregiro: " + this.sobregiro);

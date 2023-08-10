@@ -1,4 +1,3 @@
-
 import { CuentaAhorros } from "./CuentaAhorros";
 import { CuentaCorriente } from "./CuentaCorriente";
 
@@ -8,6 +7,7 @@ cuentaAhorros.retirar(50000);
 cuentaAhorros.extractoMensual();
 cuentaAhorros.imprimir();
 
+console.log("/////////////////////////")
 
 let cuentaCorriente = new CuentaCorriente(800000, 1);
 cuentaCorriente.consignar(20000);
